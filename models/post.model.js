@@ -7,7 +7,8 @@ const mongoose = require('mongoose');
 // Post Schema Definition
 const postSchema = new mongoose.Schema({
     title: {
-        type: String
+        type: String,
+        minimim : 5
     },
     content: {
         type: String
@@ -17,9 +18,11 @@ const postSchema = new mongoose.Schema({
     },
     tags: {
         type: [String]
+    
     },
     likes: {
-        type: Number
+        type: Number,
+        default: 0
     },
     createdAt: {
         type: Date,
