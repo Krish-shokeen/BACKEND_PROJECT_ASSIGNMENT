@@ -9,7 +9,7 @@ dotenv.config();
 // Import routes
 const postRouter = require("./routes/post.routes.js");
 
-// Initialize Express app
+// Initialize Express app 
 const app = express();
 
 // Middleware to parse JSON
@@ -17,7 +17,7 @@ app.use(express.json());
 
 // Database connection
 mongoose
-    .connect(process.env.MANGO_URL)
+    .connect(process.env.MONGO_URL)
     .then(() => {
         console.log("Database connected successfully!");
     })
